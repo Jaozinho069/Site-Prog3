@@ -1,0 +1,159 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{% block titulo %}Login de Usuário{% endblock %}</title>
+  <link rel="stylesheet" href="{% static 'css/extends.css' %}" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap"
+    rel="stylesheet"
+  />
+  <style>
+    .login-page {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 80vh;
+    }
+
+    .login-page__content {
+      width: 100%;
+      max-width: 400px;
+      padding: 20px;
+      background: #f9f9f9;
+      border-radius: 10px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-control {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      outline: none;
+      transition: box-shadow 0.3s ease;
+    }
+
+    .form-control:focus {
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+      border-color: #007bff;
+    }
+
+    .form-actions {
+      text-align: center;
+    }
+
+    .register-link {
+      margin-top: 15px;
+      text-align: center;
+      font-size: 14px;
+    }
+
+    .register-link a {
+      color: #007bff;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .register-link a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="navbar__content max-width mb-0">
+      <a href="/"><img src="{% static 'assets/if.png' %}" alt="sp" width="70px" height="70px" /></a>
+      <ul class="navbar__links">
+        <li><a href="/">Início</a></li>
+        <li><a href="#footer">Contato</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Página de Login -->
+  <section class="login-page">
+    <div class="login-page__content">
+      <div class="page-heading">
+        <h1>Entre</h1>
+        <p class="subheading">e Seja Bem-Vindo!</p>
+      </div>
+      <!-- Mensagens -->
+      {% if messages %}
+      <div class="alerts">
+        {% for m in messages %}
+        <div class="alert bg-{{ m.tags }}">
+          {{ m }}
+        </div>
+        {% endfor %}
+      </div>
+      {% endif %}
+      <!-- Formulário de Login -->
+      <form method="post" class="form">
+        {% csrf_token %}
+        <div class="form-group">
+          <input
+            type="text"
+            id="username"
+            name="username"
+            placeholder="Nome de Usuário"
+            class="form-control"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Senha"
+            class="form-control"
+            required
+          />
+        </div>
+        <div class="form-actions">
+          <input type="submit" class="btn btn-primary" value="Entrar" />
+        </div>
+        <div class="register-link">
+          <p>Ainda não possui conta? <a href="/cadusuario/">Cadastre-se</a></p>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="footer">
+    <div class="footer__content max-width mb-0">
+      <h2 class="tertiary-title mb-s">Vamos conversar?</h2>
+      <p class="mb-m">Mande uma mensagem para mim usando algum meio abaixo.</p>
+      <div class="footer__contact mb-m">
+        <span class="mb-m">joaocontatoprofissional79@gmail.com</span>
+        <span>69 98478-9797</span>
+      </div>
+      <ul class="mb-l">
+        <li>
+          <a href="https://www.instagram.com/souza.jaov/"><img src="{% static 'assets/instagram.svg' %}" alt="Instagram" /></a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/in/joao-vitor-a9457126b/"><img src="{% static 'assets/linkedin.svg' %}" alt="Linkedin" /></a>
+        </li>
+        <li>
+          <a href="https://github.com/Jaozinho069"><img src="{% static 'assets/git.png' %}" width="38px" height="40px" alt="Github" /></a>
+        </li>
+      </ul>
+    </div>
+  </footer>
+</body>
+</html>

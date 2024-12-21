@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 04/04</title>
+</head>
+<body>
+    <h1>Formulario para inscrição no baile Funk</h1>
+    <form>
+    <fieldset style="width: 35%;">
+        <legend>Preencha os seguintes campos:</legend>
+        <table style="width: 25%;" margin="0 auto">
+            <tr>
+                <td style="text-align: righ">nome completo:</td>
+                <td><input type="name" name="nome"> </td>
+            </tr>
+
+            <tr>
+                <td style="text-align: right">email:</td>
+                <td><input type="email" name="email"> </td>
+            </tr>
+            <tr>
+                <td style="text-align: right">Sexo:</td>
+                <td><input type="radio" name= "masculino" value="masculino">masculino</td>
+                <td><input type="radio" name= "feminino" value="feminino">feminino</td> 
+                <td><input type="radio" name= "vasco" value="vasco">vasco da gama</td> 
+            </tr>
+            <tr>
+                <td style="text-align: right">cargo:</td>
+                <td><input type="text" name="cargo"> </td>
+            </tr>
+            <tr>
+                <td style="text-align: right">Nascimento:</td>
+                <td><input type="date" name="nascimento"> </td>
+            </tr>
+            <tr>
+                <td style="text-align: right">Telefone:</td>
+                <td><input type="tel" name="telefone"> </td>
+            </tr>
+    </table>
+    </form>
+    </fieldset>
+    <h1>Informações da Instiuição</h1>
+    <p>Preencha abaixo com as informações do seu grupo funk</p>
+        <form>
+            <fieldset style="width: 35%;">
+                <table style="25%" margin="0 auto">
+                <tr>
+                    <td style="text-align: right">grupo funk:</td>
+                    <td><input type="text" name="grupo funk"> </td>
+                </tr>
+                <tr>
+                    <td style="text-align: right">Endereço:</td>
+                    <td><input type="text" name="Endereço"> </td>
+                </tr>
+                <tr>
+                    <td style="text-align: right">Cidade:</td>
+                    <td><input type="text" name="Cidade"> </td>
+                </tr>
+                <tr>
+                    <td style="text-align: right">UF:</td>
+                    <td>
+                        <select name="UF">
+                            <option selected disabled>Selecione...</option>
+                            <option>Rio de Janeiro</option>
+                            <option>Mina Gerais</option>
+                            <option>Sao Paulo</option>
+                            <option>Rondonia</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align: right">Quant. Dançarinos:</td>
+                    <td><input type="number" name=""Dançarinos></td>
+                </tr>
+                <tr>
+                    <td style="text-align: right">Observaçoes:</td>
+                    <td><textarea name="texto" cols="21" rows="1"></textarea> </td>
+                </tr>
+                </table>
+            </fieldset>
+                <label for="recibo">Recibo</label>
+                <input type="checkbox" name="recibo">
+                    emitir no nome do grupo funk
+                <table>
+                    <tr>
+                        <td colspan="2" style="text-align: right"></td>
+                        <td><input type="submit" name="Enviar" value="Finalizar Inscrição"> </td>
+                    </tr>
+                </table>
+        </form>
+       
+</body>
+<p><form><button class="button2" type="submit"><strong><a href="../Forms/index2.html">Voltar para Formulario Anterior</a></strong></button></form></p>
+<p><form><button class="button2" type="submit"><strong><a href="../../index.html">Voltar para Inicio</a></strong></button></form></p>
+</html>

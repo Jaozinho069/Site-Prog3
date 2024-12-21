@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <!-- Meta tags -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- title -->
+    <title>Jaozinho069 Portfólio</title>
+    <!-- CSS -->
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'sites/css/extends.css' %}" />
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- navbar -->
+    <nav class="navbar">
+      <div class="navbar__content max-width mb-0">
+        <a href="/">
+          <img src="{% static 'assets/if.png' %}" alt="sp" width="70px" height="70px" />
+        </a>
+        <ul class="navbar__links">
+          <li><a href="#header">Início</a></li>
+          <li><a href="#about">Sobre</a></li>
+          <li><a href="#skills">Habilidades</a></li>
+          <li><a href="#projects">Projetos</a></li>
+          <li><a href="#footer">Contato</a></li>
+        </ul>
+        <div class="navbar__mobile">
+          <img src="{% static 'assets/menu.svg' %}" alt="menu" class="burguer" />
+          <ul class="mobile__links">
+            <li><a href="#header">Início</a></li>
+            <li><a href="#about">Sobre</a></li>
+            <li><a href="#skills">Habilidades</a></li>
+            <li><a href="#projects">Projetos</a></li>
+            <li><a href="#footer">Contato</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- header -->
+    <header id="header" class="max-width">
+      <div class="header__left">
+        <h1>Olá! Sou João Vitor</h1>
+        <p>
+          Sou aluno do curso Superior em Tecnologia em Analise e Desenvolvimento de Sistemas.
+        </p>
+        <a href="#about" class="btn btn-primary">Saiba Mais!</a>
+      </div>
+      <div class="header__right">
+        <div class="header__image">
+          <img src="{% static 'assets/jao2.jfif' %}" alt="Lucas Silva" class="lucas" />
+          <img src="{% static 'assets/abstract.svg' %}" alt="background" class="background" />
+        </div>
+      </div>
+    </header>
+
+    <!-- Sobre -->
+    <section id="about" class="about max-width">
+      <div class="about__left">
+        <h2 class="secondary-title">Além do código: quem sou eu?</h2>
+        <p>
+          Que tal se conectar comigo nas redes sociais abaixo e saber mais sobre minha pessoa?
+        </p>
+        <ul>
+          <li>
+            <a href="https://www.instagram.com/souza.jaov/"><img src="{% static 'assets/instagram.svg' %}" alt="Instagram" /></a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/joao-vitor-a9457126b/"><img src="{% static 'assets/linkedin.svg' %}" alt="Linkedin" /></a>
+          </li>
+          <li>
+            <a href="https://github.com/Jaozinho069"><img src="{% static 'assets/git.png' %}"  width="38px" height="40px" alt="Facebook" /></a>          
+          </li>
+        </ul>
+      </div>
+      <div class="about__right">
+        <h3 class="tertiary-title mb-m">
+          Aluno de ADS
+        </h3>
+        <p>
+          curso ofertado pelo IFRO - Instituto Federal de Ariquemes - Campus Ariquemes. Esse web site tem função 
+          de servir como pagina de teste e portfólio dos conteúdos e aprendizados adquiridos ao decorrer do curso,
+          bem como apresentar as atividades desenvolvidas
+        </p>
+        <p>
+          Eu amo o desafio de encontrar soluções inovadoras e criativas para
+          problemas complexos e estou sempre buscando aprender e crescer como
+          profissional.
+        </p>
+      </div>
+    </section>
+
+    <!-- habilidades -->
+    <section id="skills" class="skills">
+      <div class="skills__content max-width">
+        <h2 class="tertiary-title">O que estou aprendendo no momento?</h2>
+        <p class="description">
+          Descubra as habilidades e ferramentas que estou aprendendo a dominar e que me permitirão
+          criar soluções criativas e funcionais para meus (futuros) clientes.
+        </p>
+        <ul>
+          <li class="skills__item">
+            <div class="image-container">
+              <img src="{% static 'assets/notebook.png' %}" alt="Desenvolvimento Web" />
+            </div>
+            <h3>Desenvolvimento Web</h3>
+            <p>
+              Experiência em desenvolvimento fullstack com foco em tecnologias modernas.
+            </p>
+          </li>
+          <li class="skills__item">
+            <div class="image-container">
+              <img src="{% static 'assets/py.png' %}" alt="Web Design" width="40px" height="40px" />
+            </div>
+            <h3>Linguagem Python</h3>
+            <p>
+              Linguagem de programação amplamente usada em aplicações da Web, desenvolvimento de software, ciência de dados e machine learning (ML).
+            </p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Projetos -->
+    <section id="projects" class="projects max-width">
+      <div class="projects__content">
+        <h2 class="secondary-title">Atividades Desenvolvidas</h2>
+        <p>
+          Essas atividades são referente a disciplina de Programação 1,
+          ministrada pelo professor Marcos Faino.
+        </p>
+      </div>
+      <ul>
+        <li>
+          <div class="image">
+            <img src="{% static 'atividades/AtividadeAriquemes/Ariquemes_bandeira.jpg' %}" alt="Gerenciamento de tarefas" />
+          </div>
+          <div class="projects__info">
+            <h3 class="tertiary-title">
+              Tabela com informações sobre Ariquemes
+            </h3>
+            <p>
+              Contém infos como: bairro, temperaturas médias, pluviômetro, etc.
+            </p>
+            <a href="{% static 'atividades/AtividadeAriquemes/index.html' %}">Leia mais &rarr;</a>
+          </div>
+        </li>
+        <li class="projects__reversed-list">
+          <div class="image">
+            <img src="https://img.freepik.com/vetores-gratis/modelo-de-formulario-de-inscricao-com-design-plano_23-2147971971.jpg?w=2000" alt="ecommerce" />
+          </div>
+          <div class="projects__info">
+            <h3 class="tertiary-title">
+              Desenvolvimento de formulários
+            </h3>
+            <p>
+              Possui alguns exemplos de formulários feitos em sala de aula.
+            </p>
+            <a href="{% static 'atividades/Forms/index1.html' %}">Leia mais &rarr;</a>
+          </div>
+        </li>
+        <li>
+          <div class="image">
+            <img src="{% static 'assets/layout.png' %}" alt="delivery" />
+          </div>
+          <div class="projects__info">
+            <h3 class="tertiary-title">
+              Desenvolvimento de Layouts
+            </h3>
+            <p>
+              Possui exemplos de layouts que podem ser usados para criação de websites (como esse)
+            </p>
+            <a href="{% static 'atividades/layouts/index.html' %}">Leia mais &rarr;</a>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer">
+      <div class="footer__content max-width mb-0">
+        <h2 class="tertiary-title mb-s">Vamos conversar?</h2>
+        <p class="mb-m">
+          Mande uma mensagem para mim usando algum meio abaixo.
+        </p>
+        <div class="footer__contact mb-m">
+          <span class="mb-m">joaocontatoprofissional79@gmail.com</span>
+          <span>69 98478-9797</span>
+        </div>
+        <ul class="mb-l">
+          <li>
+            <a href="https://www.instagram.com/souza.jaov/"><img src="{% static 'assets/instagram.svg' %}" alt="Instagram" /></a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/joao-vitor-a9457126b/"><img src="{% static 'assets/linkedin.svg' %}" alt="Linkedin" /></a>
+          </li>
+          <li>
+            <a href="https://github.com/Jaozinho069"><img src="{% static 'assets/git.png' %}"  width="38px" height="40px" alt="Facebook" /></a>
+          </li>
+        </ul>
+
+      </div>
+    </footer>
+    <!-- script -->
+    <script src="{% static 'scripts/index.js' %}"></script>
+  </body>
+</html>
